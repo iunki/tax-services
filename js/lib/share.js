@@ -6,12 +6,12 @@ Share = {
     },
     ok: function (purl) {
         url = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
-        url += 'st._surl=' + encodeURIComponent(purl);
+        url += '&st._surl=' + encodeURIComponent(purl);
         Share.popup(url);
     },
     fb: function (purl) {
         url = 'http://www.facebook.com/sharer.php?s=100';
-        url += 'p[url]=' + encodeURIComponent(purl);
+        url += '&p[url]=' + encodeURIComponent(purl);
         Share.popup(url);
     },
     tw: function (purl) {
