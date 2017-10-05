@@ -76,6 +76,7 @@ h2 {
 }
 .container {
   width: 100%;
+  min-width: 1615px;
   padding: 0 150px;
   margin: 0 auto;
 }
