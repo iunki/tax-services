@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang=ru>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sdelka</title>
+    <!--<link rel="stylesheet" href="css/grid12.css">-->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="full-w header-block header-sm">
+    <div class="container">
+        <div class="header-content">
+            <div class="top-title">
+                <h1 class="main-title">
+                    ПРОСЧИТАЙ СДЕЛКУ!
+                </h1>
+                <div class="descr col-lg-5">
+                    В помощь руководителю (предпринимателю)
+                </div>
+            </div>
+            <div class="cond">
+                Условия: сервис предназначен для расчета чистой прибыли налогов, подлежащих уплате, если вы знаете сумму
+                дохода по договору и суммы расходов для его выполнения.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-block" id="sdelka">
+    <div class="container">
+        <div class="pull-left">
+            <article id="article-entity">
+                <h3>Вводные данные:</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="radio">
+                                <input id="radio1" name="radio-entity" type="radio">
+                                <label for="radio1" class="radio-label">Юридическое лицо</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inputs">
+                                <div class="radio">
+                                    <input id="radio3" name="radio-da" type="radio">
+                                    <label for="radio3" class="radio-label">ДА1</label>
+                                </div>
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="radio">
+                                <input id="radio2" name="radio-entity" type="radio">
+                                <label for="radio2" class="radio-label">Индивидуальный предприниматель</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inputs">
+                                <div class="radio">
+                                    <input id="radio4" name="radio-da" type="radio">
+                                    <label for="radio4" class="radio-label">ДА2</label>
+                                </div>
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h3>Система налогооблажения</h3>
+                <table id="t2">
+                    <tr>
+                        <td>
+                            <label for="osno">ОСНО</label>
+                        </td>
+                        <td colspan="2">
+                            <div class="inputs">
+                                <input type="text" id="osno">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="usn">УСН</label>
+                        </td>
+                        <td>
+                            <div class="inputs">
+                                <input type="text" id="usn">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inputs">
+                                <label for="st">Ставка единого налога (ST) </label>
+                                <input type="text" id="st">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <p>п.2 статьи 346.20 Налогового Кодекса РФ устанавливает ставку в размере 15%. Законами субъектов РФ<br>
+                    могут быть установлены дифференцированные налоговые ставки в пределах от 5% до 15%)</p>
+            </article>
+        </div>
+        <div class="pull-right">
+            <div id="promo">
+                <img src="img/logo.png" alt="Декларация онлайн" class="logo">
+                <h2>Отчетность<br>через интернет</h2>
+                <div class="price">
+                    <span>1 575</span>
+                    <div class="meas">
+                        <span>руб</span>
+                        <span>год</span>
+                    </div>
+                </div>
+                <div class="btn btn-green">Купить</div>
+                <img src="img/cup.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="share">
+            <p>Понравился калькулятор?</p>
+            <p>Расскажите друзьям и коллегам в соц. сетях</p>
+        </div>
+    </div>
+    <table id="socials">
+        <tr>
+            <td class="vk"><a href=""><img src="img/vk.png" alt=""></a></td>
+            <td class="fb"><a href=""><img src="img/fb.png" alt=""></a></td>
+            <td class="inst"><a href=""><img src="img/inst.png" alt=""></a></td>
+            <td class="tw"><a href=""><img src="img/tw.png" alt=""></a></td>
+            <td class="ok"><a href=""><img src="img/ok.png" alt=""></a></td>
+        </tr>
+    </table>
+    <div class="container">
+        <div class="rights">
+            2001-2017 Все права защищены
+        </div>
+    </div>
+</div>
+</body>

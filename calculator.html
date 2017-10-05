@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang=ru>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calc</title>
+    <!--<link rel="stylesheet" href="css/grid12.css">-->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="full-w header-block">
+    <div class="container">
+        <div class="top-title">
+            <h1 class="main-title">
+                Калькулятор НДС
+            </h1>
+            <div class="descr col-lg-5">
+                Онлайн-калькулятор расчета НДС<br>
+                для руководителей
+            </div>
+        </div>
+        <div class="clearfix full-w">
+            <div class="left-block">
+                <div class="par">
+                    <h2 class="title">
+                        Ответьте на вопросы, <br>
+                        чтобы правильно рассчитать НДС
+                    </h2>
+                    <div class="par-content">
+                        <div class="line">
+                            <div class="text">
+                                Есть авансы от покупателей?
+                            </div>
+                            <div class="buttons">
+                                <div class="btn btn-green">Да</div>
+                                <div class="btn btn-red">Нет</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="text">
+                                Есть авансы поставщикам?
+                            </div>
+                            <div class="buttons">
+                                <div class="btn btn-green">Да</div>
+                                <div class="btn btn-red">Нет</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="par">
+                    <h2 class="title">
+                        Введите данные
+                    </h2>
+                    <div class="par-content">
+                        <div class="line">
+                            <div class="text text-fl">
+                                Сумма продаж
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text">
+                                <div class="addon">руб.</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="text text-fl">
+                                Сумма покупок
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text">
+                                <div class="addon">руб.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summ-wrapper">
+                        <img src="img/summ.png" alt="">
+                        <div class="text-block">
+                            <p>Сумма НДС 18%</p>
+                            <span id="result"><span>0</span>  ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-block">
+                <div id="promo">
+                    <img src="img/logo.png" alt="Декларация онлайн" class="logo">
+                    <h2>Отчетность<br>через интернет</h2>
+                    <div class="price">
+                        <span>1 575</span>
+                        <div class="meas">
+                            <span>руб</span>
+                            <span>год</span>
+                        </div>
+                    </div>
+                    <div class="btn btn-green">Купить</div>
+                    <img src="img/cup.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-block">
+    <div class="container">
+
+        <article>
+            <h3>О налоге</h3>
+            <p>
+                В России НДС равен 18% для всех товаров и услуг, кроме тех, что указаны в перечне ст. 164, п. 2 НК РФ:
+                некоторых товаров для детей, медпрепаратов, пищевых <br>продуктов, печатных периодических изданий. Для
+                этих
+                товаров ставка 10%.
+            </p>
+        </article>
+        <article>
+            <h3>Как рассчитать НДС</h3>
+            <p>При расчете учитываются продажи и покупки с НДС.</p>
+            <p>Чтобы вычислить налог на добавленную стоимость, нужно умножить на 18 и разделить 118 сумму покупок,
+                продаж, долга и аванса, а потом вычесть или сложить эти суммы. <br>Мы делим числа на 118, потому что
+                полная
+                стоимость — 100%, мы добавляем 18% сверху. Поэтому сначала вы отвечаете на вопросы об авансах — так
+                калькулятор правильно <br>подставит формулу для расчета налога.</p>
+        </article>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="share">
+            <p>Понравился калькулятор?</p>
+            <p>Расскажите друзьям и коллегам в соц. сетях</p>
+        </div>
+    </div>
+    <table id="socials">
+        <tr>
+            <td class="vk"><a href=""><img src="img/vk.png" alt=""></a></td>
+            <td class="fb"><a href=""><img src="img/fb.png" alt=""></a></td>
+            <td class="inst"><a href=""><img src="img/inst.png" alt=""></a></td>
+            <td class="tw"><a href=""><img src="img/tw.png" alt=""></a></td>
+            <td class="ok"><a href=""><img src="img/ok.png" alt=""></a></td>
+        </tr>
+    </table>
+    <div class="container">
+        <div class="rights">
+            2001-2017 Все права защищены
+        </div>
+    </div>
+</div>
+</body>
+</html>
