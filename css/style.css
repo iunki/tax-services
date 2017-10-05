@@ -390,6 +390,9 @@ input:focus {
 .footer #socials td.ok:hover {
   background-color: #f0931d;
 }
+.footer #socials td.google:hover {
+  background-color: #db4639;
+}
 #tax-block {
   margin-top: 145px;
 }
