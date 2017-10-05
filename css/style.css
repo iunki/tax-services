@@ -164,6 +164,7 @@ input:focus {
 }
 .header-block .left-block .par:nth-child(2) {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 .header-block .left-block .par .title {
   padding: 70px 0;
@@ -173,6 +174,13 @@ input:focus {
 .header-block .left-block .par .par-content {
   display: inline-block;
   vertical-align: top;
+}
+.header-block .left-block .par .par-content .vertical-middle {
+  display: table;
+}
+.header-block .left-block .par .par-content .vertical-middle .lines-wrapper {
+  display: table-cell;
+  vertical-align: middle;
 }
 .header-block .left-block .par .par-content .line {
   display: flex;
@@ -184,7 +192,8 @@ input:focus {
   width: 390px;
 }
 .header-block .left-block .par .par-content .line .text.text-fl {
-  width: 220px;
+  width: 244px;
+  padding-right: 20px;
 }
 .header-block .left-block .par .par-content .line .buttons .btn:first-child {
   margin-right: 30px;
@@ -207,14 +216,13 @@ input:focus {
   top: 15px;
 }
 .header-block .left-block .par .summ-wrapper {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  top: -50px;
+  display: table-cell;
+  vertical-align: middle;
+  width: 264px;
+  height: 232px;
+  background: url("../img/summ.png") center center no-repeat;
 }
 .header-block .left-block .par .summ-wrapper .text-block {
-  position: absolute;
-  top: 70px;
   width: 100%;
   text-align: center;
   font-size: 18px;

@@ -36,7 +36,7 @@
                             </div>
                             <div class="buttons">
                                 <div class="btn btn-green" data-id="1">Да</div>
-                                <div class="btn btn-red" data-id="2">Нет</div>
+                                <div class="btn btn-red active" data-id="2">Нет</div>
                             </div>
                         </div>
                         <div class="line">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="buttons">
                                 <div class="btn btn-green" data-id="3">Да</div>
-                                <div class="btn btn-red" data-id="4">Нет</div>
+                                <div class="btn btn-red active" data-id="4">Нет</div>
                             </div>
                         </div>
                     </div>
@@ -55,74 +55,77 @@
                         Введите данные
                     </h2>
                     <div class="par-content">
+                        <div class="vertical-middle">
+                            <div class="lines-wrapper">
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Долг перед покупателями на начало квартала
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="start-debet">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
 
-                        <div class="line">
-                            <div class="text text-fl">
-                                Долг перед покупателями на начало квартала
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Долг поставщиков на начало квартала
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="start-getter-debet">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Сумма продаж
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="sell">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Долг перед покупателями на конец квартала
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="finish-debet">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Долг поставщиков на конец квартала
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="finish-getter-debet">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <div class="text text-fl">
+                                        Сумма покупок
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="order">
+                                        <div class="addon">руб.</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="start-debet">
-                                <div class="addon">руб.</div>
+
+                            <div class="summ-wrapper">
+                                <div class="text-block">
+                                    <p>Сумма НДС 18%</p>
+                                    <span id="result"><span>0</span>  ₽</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="line">
-                            <div class="text text-fl">
-                                Долг поставщиков на начало квартала
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="start-getter-debet">
-                                <div class="addon">руб.</div>
-                            </div>
-                        </div>
-
-                        <div class="line">
-                            <div class="text text-fl">
-                                Сумма продаж
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="sell">
-                                <div class="addon">руб.</div>
-                            </div>
-                        </div>
-
-                        <div class="line">
-                            <div class="text text-fl">
-                                Долг перед покупателями на конец квартала
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="finish-debet">
-                                <div class="addon">руб.</div>
-                            </div>
-                        </div>
-
-                        <div class="line">
-                            <div class="text text-fl">
-                                Долг поставщиков на конец квартала
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="finish-getter-debet">
-                                <div class="addon">руб.</div>
-                            </div>
-                        </div>
-
-                        <div class="line">
-                            <div class="text text-fl">
-                                Сумма покупок
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="order">
-                                <div class="addon">руб.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="summ-wrapper">
-                        <img src="img/summ.png" alt="">
-                        <div class="text-block">
-                            <p>Сумма НДС 18%</p>
-                            <span id="result"><span>0</span>  ₽</span>
-                        </div>
                     </div>
                 </div>
             </div>
