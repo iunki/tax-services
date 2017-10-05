@@ -42,6 +42,11 @@ body {
 .pull-right {
   float: right;
 }
+@media (max-width: 1700px) {
+  .pull-right {
+    float: left;
+  }
+}
 .npr {
   padding-right: 0 !important;
 }
@@ -89,6 +94,9 @@ h2 {
     padding: 0 30px;
   }
 }
+.bg-gray {
+  background-color: #eff0f5;
+}
 input {
   font-family: AvenirNextCyr-Medium, sans-serif;
   color: #5f5f5f;
@@ -103,6 +111,7 @@ input:focus {
 }
 .header-block {
   background-image: url("../img/header.png");
+  background-attachment: fixed;
   background-size: cover;
   min-height: 1172px;
 }
@@ -373,6 +382,23 @@ input:focus {
 .footer #socials td.ok:hover {
   background-color: #f0931d;
 }
+#tax-block {
+  margin-top: 145px;
+}
+#tax-block article {
+  padding: 50px 0;
+}
+#tax-block article h3 {
+  margin-bottom: 0;
+}
+#tax-block article > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+#tax-block article > *:last-child {
+  margin-right: 0;
+}
 .radio input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -408,4 +434,108 @@ input:focus {
 }
 .radio input[type="radio"] + .radio-label:empty:before {
   margin-right: 0;
+}
+.modal-wrapper {
+  display: table;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+.modal-wrapper .modal {
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-wrapper .modal .modal-content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#modal-regions {
+  color: #fff;
+}
+#modal-regions .modal .modal-content {
+  padding: 65px;
+  background-color: #413142;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+#modal-regions .modal .modal-content .modal-title {
+  font-family: AvenirNextCyr-Demi, sans-serif;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+#modal-regions .modal .modal-content .table-wrapper {
+  max-height: 485px;
+  overflow: auto;
+}
+#modal-regions .modal .modal-content .table-wrapper table {
+  width: 100%;
+}
+#modal-regions .modal .modal-content .table-wrapper table tr {
+  cursor: pointer;
+}
+#modal-regions .modal .modal-content .table-wrapper table tr:hover td {
+  color: #00a652;
+  text-decoration: underline;
+}
+#modal-regions .modal .modal-content .table-wrapper table tr td {
+  padding: 4px 0;
+  font-size: 18px;
+}
+.w-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0px 0px 0px 6px #413142;
+  background-color: #fff;
+}
+.w-scrollbar::-webkit-scrollbar {
+  width: 13px;
+  background-color: #F5F5F5;
+}
+.w-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #fff;
+}
+.w-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #f6f6f6;
+}
+.w-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: #e2e2e2;
+}
+.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.close:hover::before,
+.close:hover::after {
+  opacity: 1;
+}
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #fff;
+  opacity: 0.8;
+}
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
+}
+.close.hairline::before,
+.close.hairline::after {
+  height: 1px;
 }
