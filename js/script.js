@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     var getDataIdArray = function () {
 
         var resultArray = [];
@@ -160,7 +159,19 @@ $(document).ready(function () {
 
         getResult();
 
-    })
+    });
+
+    var soc = {
+        vk: "https://vk.com",
+        fb: "https://vk.com",
+        ok: "https://vk.com",
+        tw: "https://vk.com",
+    };
+
+    $("#socials tr td ").on("click", function () {
+        Share[$(this).data("id")](soc[$(this).data("id")]);
+    });
+
 
     setVisiableInput();
 
