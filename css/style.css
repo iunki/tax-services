@@ -55,6 +55,10 @@ body {
   line-height: 50px;
   cursor: pointer;
   display: inline-block;
+  opacity: 0.5;
+}
+.btn.active {
+  opacity: 1;
 }
 .btn-green {
   background-color: #00a652;
