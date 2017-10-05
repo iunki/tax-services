@@ -183,6 +183,7 @@ input {
       color: #fff;
       &:nth-child(2) {
         margin-top: 40px;
+        margin-bottom: 40px;
       }
       .title {
         padding: 70px 0;
@@ -192,6 +193,13 @@ input {
       .par-content {
         display: inline-block;
         vertical-align: top;
+        .vertical-middle{
+          display: table;
+          .lines-wrapper{
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
         .line {
           display: flex;
           align-items: center;
@@ -200,7 +208,8 @@ input {
             font-size: 24px;
             width: 390px;
             &.text-fl {
-              width: 220px;
+              width: 244px;
+              padding-right: 20px;
             }
           }
           .buttons .btn:first-child {
@@ -226,13 +235,12 @@ input {
         }
       }
       .summ-wrapper {
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        top: -50px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 264px;
+        height: 232px;
+        background: url("../img/summ.png") center center no-repeat;
         .text-block {
-          position: absolute;
-          top: 70px;
           width: 100%;
           text-align: center;
           font-size: 18px;
