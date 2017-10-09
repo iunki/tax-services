@@ -19,7 +19,10 @@ $(document).ready(function () {
         var elemArray = [$("#start-debet"), $("#start-getter-debet"), $("#sell"), $("#finish-debet"), $("#finish-getter-debet"), $("#order")];
 
         $.each(elemArray, function (index, obj) {
+
+            obj.val("");
             obj.parent().parent().hide();
+
         });
 
 
@@ -68,13 +71,12 @@ $(document).ready(function () {
 
     };
 
-    var validateInputValue = function () {
-
-        var array = getDataIdArray();
+    var validateInputValue = function (array) {
 
         for (var i = 0; i < array.length; i++) {
 
-            if (array[i] == "") {
+            if (!(array[i] ^ 0 == array[i])) {
+
                 return false;
 
             }
@@ -89,12 +91,12 @@ $(document).ready(function () {
         var resultArray = getDataIdArray();
         var result = 0;
 
-        var startDebt = $("#start-debet").val();
-        var startGetterDebt = $("#start-getter-debet").val();
-        var sell = $("#sell").val();
-        var finishDebt = $("#finish-debet").val();
-        var finishGetterDebt = $("#finish-getter-debet").val();
-        var order = $("#order").val();
+        var startDebt = parseInt($("#start-debet").val().replace(/[^0-9]/g, ''));
+        var startGetterDebt = parseInt($("#start-getter-debet").val().replace(/[^0-9]/g, ''));
+        var sell = parseInt($("#sell").val().replace(/[^0-9]/g, ''));
+        var finishDebt = parseInt($("#finish-debet").val().replace(/[^0-9]/g, ''));
+        var finishGetterDebt = parseInt($("#finish-getter-debet").val().replace(/[^0-9]/g, ''));
+        var order = parseInt($("#order").val().replace(/[^0-9]/g, ''));
 
 
         if (
@@ -103,7 +105,7 @@ $(document).ready(function () {
             validateInputValue([sell, order])
         ) {
 
-            result = ((sell - order) * 18 / 118 ).toFixed(2);
+            result = ((sell - order) * 18 / 118 );
 
         } else if (
             resultArray.indexOf(1) != -1 &&
@@ -111,28 +113,27 @@ $(document).ready(function () {
             validateInputValue([sell, order, finishDebt, startDebt])
         ) {
 
-            result = ((sell - order + finishDebt + startDebt ) * 18 / 118).toFixed(2);
+            result = ((sell - order + finishDebt + startDebt ) * 18 / 118);
 
         } else if (
             resultArray.indexOf(1) != -1 &&
             resultArray.indexOf(3) != -1 &&
-            validateInputValue([sell, order, finishDebt, startDebt])
+            validateInputValue([sell, order, finishDebt, startDebt, startGetterDebt, finishGetterDebt])
         ) {
 
-            result = ((sell - order - startGetterDebt + finishGetterDebt) * 18 / 118).toFixed(2);
+            result = ((sell - order + finishDebt - startDebt - startGetterDebt ) * 18 / 118 + finishGetterDebt);
 
         } else if (
             resultArray.indexOf(2) != -1 &&
             resultArray.indexOf(3) != -1 &&
-            validateInputValue([sell, order, finishDebt, startDebt, startGetterDebt, finishGetterDebt])
+            validateInputValue([sell, order, startGetterDebt, finishGetterDebt])
         ) {
 
-            result = ((sell - order + finishDebt - startDebt - startGetterDebt + finishGetterDebt) * 18 / 118).toFixed(2);
+            result = ((sell - order - startGetterDebt ) * 18 / 118 + finishGetterDebt);
 
         }
 
-
-        $("#result").find("span").html((result != 0) ? result : 0);
+        $("#result").find("span").html((result != 0) ? Math.round(result) : 0);
     };
 
 
@@ -143,19 +144,21 @@ $(document).ready(function () {
         $(this).addClass("active");
 
         setVisiableInput();
+
         getResult();
 
     });
 
     $(".par .par-content .input-wrapper input").on("keyup", function () {
 
-        if (this.value.match(/,/)) {
-            this.value = this.value.replace(/,/, '.');
+
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
         }
 
-        if (this.value.match(/[^0-9.]/g)) {
-            this.value = this.value.replace(/[^0-9.]/g, '');
-        }
+
+        $(this).val(this.value.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+
 
         getResult();
 
@@ -163,7 +166,7 @@ $(document).ready(function () {
 
 
     $("#socials tr td ").on("click", function () {
-        Share[$(this).data("id")](window.location.href.slice(0,window.location.href.indexOf('\?')));
+        Share[$(this).data("id")](window.location.href.slice(0, window.location.href.indexOf('\?')));
     });
 
 
