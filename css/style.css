@@ -218,19 +218,29 @@ input:focus {
 .header-block .left-block .par .summ-wrapper {
   display: table-cell;
   vertical-align: middle;
-  width: 264px;
-  height: 232px;
-  background: url("../img/summ.png") center center no-repeat;
+  padding-left: 45px;
 }
-.header-block .left-block .par .summ-wrapper .text-block {
+.header-block .left-block .par .summ-wrapper .summ {
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 -13px 38px -10px rgba(0, 0, 0, 0.5);
+  min-width: 196px;
+  height: 167px;
+  border-radius: 5px 5px 0 0;
+  background: url("../img/card.png") 0 center repeat-x;
+  display: table;
+}
+.header-block .left-block .par .summ-wrapper .summ .text-block {
+  display: table-cell;
+  vertical-align: middle;
   width: 100%;
   text-align: center;
   font-size: 18px;
 }
-.header-block .left-block .par .summ-wrapper .text-block p {
+.header-block .left-block .par .summ-wrapper .summ .text-block p {
   margin-bottom: 10px;
 }
-.header-block .left-block .par .summ-wrapper .text-block #result {
+.header-block .left-block .par .summ-wrapper .summ .text-block #result {
   font-size: 24px;
   font-family: AvenirNextCyr-Bold, sans-serif;
 }

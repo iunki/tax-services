@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <title>Calc</title>
     <!--<link rel="stylesheet" href="css/grid12.css">-->
     <link rel="stylesheet" href="css/fonts.css">
@@ -63,7 +64,7 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="start-debet">
-                                        <div class="addon">руб.</div>
+                                        <label for="start-debet" class="addon">руб.</label>
                                     </div>
                                 </div>
 
@@ -73,7 +74,7 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="start-getter-debet">
-                                        <div class="addon">руб.</div>
+                                        <label for="start-getter-debet" class="addon">руб.</label>
                                     </div>
                                 </div>
 
@@ -83,7 +84,7 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="sell">
-                                        <div class="addon">руб.</div>
+                                        <label for="sell" class="addon">руб.</label>
                                     </div>
                                 </div>
 
@@ -93,7 +94,7 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="finish-debet">
-                                        <div class="addon">руб.</div>
+                                        <label for="finish-debet" class="addon">руб.</label>
                                     </div>
                                 </div>
 
@@ -103,7 +104,7 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="finish-getter-debet">
-                                        <div class="addon">руб.</div>
+                                        <label for="finish-getter-debet" class="addon">руб.</label>
                                     </div>
                                 </div>
 
@@ -113,15 +114,17 @@
                                     </div>
                                     <div class="input-wrapper">
                                         <input type="text" id="order">
-                                        <div class="addon">руб.</div>
+                                        <label for="order" class="addon">руб.</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="summ-wrapper">
-                                <div class="text-block">
-                                    <p>Сумма НДС 18%</p>
-                                    <span id="result"><span>0</span>  ₽</span>
+                                <div class="summ">
+                                    <div class="text-block">
+                                        <p>Сумма НДС 18%</p>
+                                        <span id="result"><span>0</span>  ₽</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +162,7 @@
                 товаров ставка 10%.
             </p>
         </article>
-        <article>
+        <!--<article>
             <h3>Как рассчитать НДС</h3>
             <p>При расчете учитываются продажи и покупки с НДС.</p>
             <p>Чтобы вычислить налог на добавленную стоимость, нужно умножить на 18 и разделить 118 сумму покупок,
@@ -167,7 +170,7 @@
                 полная
                 стоимость — 100%, мы добавляем 18% сверху. Поэтому сначала вы отвечаете на вопросы об авансах — так
                 калькулятор правильно <br>подставит формулу для расчета налога.</p>
-        </article>
+        </article>-->
     </div>
 </div>
 <div class="footer">

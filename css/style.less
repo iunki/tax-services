@@ -193,9 +193,9 @@ input {
       .par-content {
         display: inline-block;
         vertical-align: top;
-        .vertical-middle{
+        .vertical-middle {
           display: table;
-          .lines-wrapper{
+          .lines-wrapper {
             display: table-cell;
             vertical-align: middle;
           }
@@ -237,19 +237,32 @@ input {
       .summ-wrapper {
         display: table-cell;
         vertical-align: middle;
-        width: 264px;
-        height: 232px;
-        background: url("../img/summ.png") center center no-repeat;
-        .text-block {
-          width: 100%;
-          text-align: center;
-          font-size: 18px;
-          p {
-            margin-bottom: 10px;
-          }
-          #result {
-            font-size: 24px;
-            font-family: AvenirNextCyr-Bold, sans-serif;
+        padding-left: 45px;
+
+        //height: 232px;
+
+        .summ {
+          padding-left: 10px;
+          padding-right: 10px;
+          box-shadow: 0 -13px 38px -10px rgba(0, 0, 0, 0.5);
+          min-width: 196px;
+          height: 167px;
+          border-radius: 5px 5px 0 0;
+          background: url("../img/card.png") 0 center repeat-x;
+          display: table;
+          .text-block {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            p {
+              margin-bottom: 10px;
+            }
+            #result {
+              font-size: 24px;
+              font-family: AvenirNextCyr-Bold, sans-serif;
+            }
           }
         }
       }
@@ -421,7 +434,7 @@ input {
       &.ok:hover {
         background-color: #f0931d;
       }
-      &.google:hover{
+      &.google:hover {
         background-color: #db4639;
       }
     }
