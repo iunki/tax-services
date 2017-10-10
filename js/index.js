@@ -113,7 +113,7 @@ $(document).ready(function () {
             validateInputValue([sell, order, finishDebt, startDebt])
         ) {
 
-            result = ((sell - order + finishDebt + startDebt ) * 18 / 118);
+            result = ((sell - order + finishDebt - startDebt ) * 18 / 118);
 
         } else if (
             resultArray.indexOf(1) != -1 &&
