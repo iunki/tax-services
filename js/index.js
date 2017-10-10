@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         $.each(elemArray, function (index, obj) {
 
-            obj.val("");
+            obj.val(0);
             obj.parent().parent().hide();
 
         });
